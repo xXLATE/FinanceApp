@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="User06.Pages.AuthPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label FontSize="20"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="Регистрация"
+                   TextColor="White"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start">
+            <Image Source="splash_image.png"
+                   Margin="0,50" />
+            <Frame BackgroundColor="LightGray"
+                   Margin="30,10">
+                <Entry x:Name="NameEntry"
+                       Placeholder="Имя"
+                       Margin="-15,-15" />
+            </Frame>
+            <StackLayout Orientation="Horizontal"
+                         Margin="30,10">
+                <Frame BackgroundColor="LightGray">
+                    <Entry x:Name="PasswordEntry1"
+                           Placeholder="Пароль"
+                           IsPassword="True"
+                           Margin="-15,-15"
+                           WidthRequest="255" />
+                </Frame>
+                <ImageButton x:Name="Eye1"
+                             Clicked="Eye1_Clicked"
+                             Source="eye.png"
+                             HeightRequest="55"
+                             WidthRequest="60"
+                             BackgroundColor="#795548"
+                             CornerRadius="100"></ImageButton>
+            </StackLayout>
+            <Button x:Name="RegistrationButton"
+                    Clicked="RegistrationButton_Clicked"
+                    Text="Нет аккаунта?
+                    Зарегестрироваться"
+                    Margin="30, 0, 30, 0"
+                    TextColor="Gray"
+                    BackgroundColor="Transparent"></Button>
+            <StackLayout Spacing="40"
+                         VerticalOptions="End">
+                <Button x:Name="AuthButton"
+                        Clicked="AuthButton_Clicked"
+                        Text="Войти"
+                        Margin="100, 170, 100, 0"
+                        BackgroundColor="#795548"
+                        CornerRadius="50"
+                        TextColor="White"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

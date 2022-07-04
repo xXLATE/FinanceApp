@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="User06.Pages.AddRecordPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="TitleLabel"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="-50,0,0,0"
+                   Text="Создать запись"
+                   TextColor="White"
+                   FontSize="20"
+                   VerticalOptions="CenterAndExpand" />
+            <Button x:Name="TrashButton"
+                    Clicked="TrashButton_Clicked"
+                    Text="&#128465;"
+                    WidthRequest="50"
+                    TextColor="White"
+                    HorizontalOptions="End"
+                    BackgroundColor="Transparent"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Start">
+                <Frame BackgroundColor="LightGray" Margin="30,10">
+                    <Picker x:Name="TypePicker"
+                            SelectedIndexChanged="TypePicker_SelectedIndexChanged"
+                            Margin="-15,-15"
+                            WidthRequest="255"
+                            Title="Тип записи" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray"
+                       Margin="30,10">
+                    <Picker x:Name="CategoryPicker"
+                            SelectedIndexChanged="CategoryPicker_SelectedIndexChanged"
+                            Margin="-15,-15"
+                            WidthRequest="255"
+                            Title="Категория расхода" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray"
+                       Margin="30,30">
+                    <Entry x:Name="SumEntry"
+                           Placeholder="Сумма"
+                           Margin="-15,-15" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray"
+                       Margin="30,10">
+                    <DatePicker x:Name="Date"
+                                Margin="-15,-15" />
+                </Frame>
+
+                <Frame BorderColor="LightGray"
+                       Margin="30,10">
+                    <Editor HeightRequest="150"
+                            BackgroundColor="LightGray"
+                            Placeholder="Описание"
+                            x:Name="Description"
+                            Margin="-20, -20" />
+                </Frame>
+
+                <StackLayout Spacing="40"
+                             Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Margin="0,100,0,0">
+                    <Button x:Name="CancelButton"
+                            Clicked="CancelButton_Clicked"
+                            Text="Отмена"
+                            BackgroundColor="#A98274"
+                            CornerRadius="50"
+                            TextColor="White"
+                            WidthRequest="150"></Button>
+                    <Button x:Name="SaveButton"
+                            Clicked="SaveButton_Clicked"
+                            Text="Сохранить"
+                            BackgroundColor="#795548"
+                            CornerRadius="50"
+                            TextColor="White"
+                            WidthRequest="150"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

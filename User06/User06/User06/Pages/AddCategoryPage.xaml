@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="User06.Pages.AddCategoryPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label HorizontalOptions="CenterAndExpand"
+                   Margin="-60,0,0,0"
+                   Text="Создать категорию"
+                   TextColor="White"
+                   FontSize="20"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="LightGray"
+                   Margin="30,10">
+                <Entry x:Name="TypeEntry"
+                       Placeholder="Тип"
+                       Margin="-15,-15" />
+            </Frame>
+
+            <StackLayout Spacing="40"
+                         Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Margin="0,550,0,0">
+                <Button x:Name="CancelButton"
+                        Clicked="CancelButton_Clicked"
+                        Text="Отмена"
+                        BackgroundColor="#A98274"
+                        CornerRadius="50"
+                        TextColor="White"
+                        WidthRequest="150"></Button>
+                <Button x:Name="SaveButton"
+                        Clicked="SaveButton_Clicked"
+                        Text="Сохранить"
+                        BackgroundColor="#795548"
+                        CornerRadius="50"
+                        TextColor="White"
+                        WidthRequest="150"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

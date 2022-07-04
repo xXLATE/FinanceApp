@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="User06.Pages.MainPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal"
+                     Margin="0,0,15,0">
+            <Button Text="&#9776;"
+                    x:Name="NewCategoryButton"
+                    Clicked="NewCategoryButton_Clicked"
+                    WidthRequest="50"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Start" />
+            <Label Text="Последние расходы"
+                   FontSize="20"
+                   TextColor="White"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
+            <Button Text="&#10133;"
+                    x:Name="NewRecordButton"
+                    Clicked="NewRecordButton_Clicked"
+                    WidthRequest="50"
+                    TextColor="White"
+                    HorizontalOptions="End"
+                    BackgroundColor="Transparent" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="filter.png"
+                       HeightRequest="30" />
+                <Picker x:Name="FilterPicker"
+                        SelectedIndexChanged="FilterPicker_SelectedIndexChanged"
+                        HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <ListView x:Name="ProjectsLV"
+                      ItemTapped="ProjectsLV_ItemTapped"
+                      ItemsSource="{Binding}"
+                      RowHeight="80">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Black"
+                                   Padding="10"
+                                   Margin="2">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout>
+                                        <Label Text="{Binding CategoryName}"
+                                               TextColor="Black"
+                                               FontSize="Medium" />
+                                        <Label Text="{Binding TypeName}"
+                                               TextColor="Black"
+                                               FontSize="Medium" />
+                                    </StackLayout>
+                                    
+                                    <Label Text="{Binding Sum}"
+                                           TextColor="Black"
+                                           HorizontalOptions="EndAndExpand"
+                                           FontSize="Medium" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

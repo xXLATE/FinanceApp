@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="User06.Pages.RegistrationPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label FontSize="20"
+                   Margin="18,0,0,0"
+                   Text="Регистрация"
+                   TextColor="White" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start">
+            <Frame BackgroundColor="LightGray"
+                   Margin="30,10">
+                <Entry x:Name="LoginEntry"
+                       Placeholder="Логин"
+                       Margin="-15,-15" />
+            </Frame>
+            <StackLayout Orientation="Horizontal"
+                         Margin="30,10">
+                <Frame BackgroundColor="LightGray">
+                    <Entry x:Name="PasswordEntry1"
+                           Placeholder="Пароль"
+                           IsPassword="True"
+                           Margin="-15,-15"
+                           WidthRequest="255" />
+                </Frame>
+                <ImageButton x:Name="Eye1"
+                             Clicked="Eye1_Clicked"
+                             Source="eye.png"
+                             HeightRequest="55"
+                             WidthRequest="60"
+                             BackgroundColor="#795548"
+                             CornerRadius="100"></ImageButton>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Margin="30,10">
+                <Frame BackgroundColor="LightGray">
+                    <Entry x:Name="PasswordEntry2"
+                           Placeholder="Повтор пароля"
+                           IsPassword="True"
+                           Margin="-15,-15"
+                           WidthRequest="255" />
+                </Frame>
+                <ImageButton x:Name="Eye2"
+                             Clicked="Eye2_Clicked"
+                             Source="eye.png"
+                             HeightRequest="55"
+                             WidthRequest="60"
+                             BackgroundColor="#795548"
+                             CornerRadius="100"></ImageButton>
+            </StackLayout>
+            <Frame BackgroundColor="LightGray"
+                   Margin="30,10">
+                <Entry x:Name="MailEntry"
+                       Placeholder="Почта"
+                       Margin="-15,-15" />
+            </Frame>
+
+            <StackLayout Spacing="5"
+                         Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Margin="0,300,0,0">
+                <Button x:Name="CancelButton"
+                        Clicked="CancelButton_Clicked"
+                        Text="Отмена"
+                        BackgroundColor="#A98274"
+                        CornerRadius="50"
+                        TextColor="White"
+                        WidthRequest="190"></Button>
+                <Button x:Name="SaveButton"
+                        Clicked="SaveButton_Clicked"
+                        Text="Зарегестрироваться"
+                        BackgroundColor="#795548"
+                        CornerRadius="50"
+                        TextColor="White"
+                        WidthRequest="190"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
